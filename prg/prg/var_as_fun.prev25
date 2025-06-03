@@ -1,0 +1,26 @@
+# Copyright (c) 2025 Prev25 Wizards
+fun putint(n: int): void
+fun putchar(c: char): void
+fun puts(s: ^char): void
+
+fun f1(a: int): int =
+    return a * 2
+
+var var_fun1: (int): int
+
+fun main(): int =
+    let
+        var var_fun2: (int, int): int
+        fun f2(a: int, b: int): int =
+            return a * b
+    in
+        var_fun1 = f1,
+        var_fun2 = f2,
+        puts("var F1: "),
+        putint(var_fun1(f1(5))),
+        putchar('\0x0A'),
+        puts("var F2: "),
+        putint(var_fun2(5, 5)),
+        putchar('\0x0A')
+    end,
+    return 0

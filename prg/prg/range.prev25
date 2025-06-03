@@ -1,0 +1,13 @@
+# Copyright (c) 2025 Prev25 Wizards
+fun putint(x: int): void
+
+fun main(): int =
+
+    let var i: int in
+        i = 0,
+        while i <= 9 do
+            putint(i),
+            i = i + 1
+        end
+    end,
+    return 0

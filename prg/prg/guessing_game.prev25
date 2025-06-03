@@ -1,0 +1,35 @@
+# Copyright (c) 2025 Prev25 Wizards
+fun puts(s: ^char): void
+fun putchar(c: char): void
+fun putint(i: int): void
+fun getint(): int
+
+var secret_number: int
+var guess: int
+var equal: bool
+
+fun main(): int =
+    puts("Guess the number!\0x0A"),
+    secret_number = 42,
+
+    equal = false,
+    while !equal do
+        puts("Please input your guess: "),
+        guess = getint(),
+        puts("You guessed: "),
+        putint(guess),
+        putchar('\0x0A'),
+
+        if guess < secret_number then
+            puts("Too small!\0x0A")
+        else
+            if guess > secret_number then
+                puts("Too big!\0x0A")
+            else
+                puts("You win!\0x0A"),
+                equal = true
+            end
+        end
+    end,
+
+    return 0

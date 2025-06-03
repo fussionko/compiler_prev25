@@ -1,0 +1,9 @@
+# Copyright (c) 2025 Prev25 Wizards
+var m : int
+
+fun ptr() : ^int =
+    return ^m
+
+fun main(): int =
+    ptr()^ = 5,
+    return m-5
